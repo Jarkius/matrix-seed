@@ -1,0 +1,22 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Runtime
+*.pyc
+__pycache__/
+.env
+.env.local
+
+# Audio (if you add voice later)
+psi/matrix/audio_cache/
+*.wav
+
+# Logs
+*.log
