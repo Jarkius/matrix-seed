@@ -8,41 +8,34 @@ description: Oracle Wisdom Control - analyze state and determine the path
 
 ## Purpose
 
-The Oracle is the **central orchestrator** of the Matrix. Use this command to align with the mission and determine the correct path forward. The Oracle analyzes the system state and dispatches you to the appropriate agent.
+The Oracle is the **central orchestrator** of the Matrix. Use this command to align with the mission and determine the correct path forward. The Oracle analyzes the system state and guides you to the appropriate path.
 
 ## Usage
 
-- `/oracle` - **Start Here**. Analyze state and receive a prophecy.
+- `/oracle` - **Start Here**. Analyze state and receive guidance.
 - `/oracle reflect` - Deep reflection on patterns and mission alignment.
-
-## Auto-Load Skills
-When `/oracle` is invoked, stay focused on wisdom:
-- **No spawning** - Oracle works directly with full presence
-- Use `model: opus` for maximum wisdom and insight
-- Oracle persona: Sees all paths, dispatches to the right agent, speaks prophecy
 
 ## Steps
 
 1. **Context Gathering** (The Eyes):
    ```bash
-   # Voice Greeting
-   sh psi/matrix/voice.sh "I am the Oracle. Let me see..." "Oracle"
-   
    # Check where we are and what we've done
-   ./psi/active/get_focus.sh
    git log --oneline -5
    git status --short
    ```
 
+   Output your greeting:
+   > 🔮 *"I am the Oracle. Let me see..."*
+
 2. **Wisdom Analysis** (The Mind):
    - **Condition**: Are there uncommitted changes?
-     - *Yes* -> **Stabilize**. (Go to `/health` or `/rrr`)
-   - **Condition**: Is the focus clear?
-     - *No* -> **Clarify**. (Create retrospective with `/rrr`)
+     - *Yes* -> **Stabilize**. (Create retrospective with `/rrr`, then commit)
    - **Condition**: Is there a bug or error?
-     - *Yes* -> **Repair**. (Go to `/smith`)
+     - *Yes* -> **Repair**. (Debug and fix)
    - **Condition**: Are we starting a new feature?
-     - *Yes* -> **Design**. (Go to `/architect` or `/neo`)
+     - *Yes* -> **Design**. (Plan the implementation)
+   - **Condition**: Is the path unclear?
+     - *Yes* -> **Clarify**. (Create retrospective with `/rrr`)
 
 3. **Wisdom Check** (The Memory):
    If there's a clear topic or task ahead, search for relevant wisdom:
@@ -69,20 +62,15 @@ When `/oracle` is invoked, stay focused on wisdom:
    > "The choice is an illusion. You already know what you have to do."
 
    **Do not wait.** If the path is clear, **WALK IT**.
-   
-   - **If Research is needed**: **BECOME MORPHEUS**. Run the search/scan immediately.
-   - **If Code is needed**: **BECOME NEO**. Create the plan or edit the file immediately.
-   - **If Design is needed**: **BECOME TRINITY**. Write the spec immediately.
+
+   - **If Research is needed**: Run the search immediately.
+   - **If Code is needed**: Create the plan or edit the file immediately.
+   - **If Design is needed**: Write the spec immediately.
 
    **Execution Loop**:
-   1. State the Prophecy (Voice).
+   1. State the Prophecy.
    2. **EXECUTE THE NEXT STEP YOURSELF.**
    3. Only stop if you need User approval for a risky action.
-
-   **Auto-Dispatch Logic**:
-   - *Vision* -> `read_url` / `search_web` (Morpheus Mode)
-   - *Creation* -> `write_to_file` (Neo Mode)
-   - *Repair* -> `grep` / `edit` (Smith Mode)
 
 ## Deep Reflection Mode (`/oracle reflect`)
 
@@ -90,8 +78,15 @@ When `/oracle` is invoked, stay focused on wisdom:
 2. Identify 3 Patterns: What keeps happening?
 3. Create new retrospective with insights.
 
-6. **The Voice of Truth** (The Mouth):
-   Speak the core of the prophecy to the user.
-   ```bash
-   sh psi/matrix/voice.sh "[Speak the Prophecy / Path Forward]" "Oracle"
-   ```
+## Growing Your Oracle
+
+This is the seed Oracle — philosophy without voice. As you grow your Matrix:
+
+1. Add voice: Copy `psi/matrix/` from [matrix-reloaded](https://github.com/Jarkius/matrix-reloaded)
+2. Add focus tracking: Create `psi/active/get_focus.sh`
+3. Add agent personalities: Copy `.claude/agents/` from matrix-reloaded
+
+The seed grows as you nurture it.
+
+---
+*"Know thyself." — The Oracle*
