@@ -11,9 +11,9 @@ matrix-seed is the **philosophy and structure** of The Matrix, without the opera
 ```
 matrix-seed (Philosophy)     vs     matrix-reloaded (Full Power)
 ─────────────────────────           ─────────────────────────────
-244KB, 53 files                     1.2MB, 180+ files
-5 core workflows                    39 workflows
-No voice                            Full TTS voice system
+66KB, 25 files                      13MB, 258 files
+5 core workflows                    39+ workflows
+No voice                            Full TTS voice system (Piper)
 Grow your own                       Enter immediately
 ```
 
@@ -87,6 +87,7 @@ The Matrix uses a multi-agent mental model:
 | **Smith** | Debugger | Bugs, security, anomalies |
 | **Tank** | Operator | Internal search, git, dependencies |
 | **Scribe** | Chronicler | Retrospectives, documentation |
+| **Mainframe** | System | Status messages, background events |
 
 In the seed, these are concepts. In [matrix-reloaded](https://github.com/Jarkius/matrix-reloaded), they have full personalities and voices.
 
